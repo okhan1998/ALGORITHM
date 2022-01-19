@@ -14,4 +14,3 @@ for(let i = 1; i < cases; i++){
     arr[i][2] = Math.min(arr[i-1][0], arr[i-1][1]) + arr[i][2];
 }
 console.log(Math.min(...arr[cases - 1]));
-
