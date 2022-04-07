@@ -34,12 +34,12 @@ let bfs = (V) => {
     queue.push(V)
     check1[V] = true;
     while(queue.length != 0){
-        
         let now = queue.shift()
         bfsarr.push(now)
         for(let i=0; i<adjArr[now].length; i++){
             if(!check1[adjArr[now][i]] && check2[adjArr[now][i]]){
                 check1[adjArr[now][i]] = true;
+                check2[adjArr[now][i]] = +check2[now] + 1;
                 queue.push(adjArr[now][i])
             }
         }
@@ -47,5 +47,5 @@ let bfs = (V) => {
     return ;
 }
 bfs(1);
-console.log(bfsarr)
-
+// console.log(check2)
+console.log(check2[H*W])
