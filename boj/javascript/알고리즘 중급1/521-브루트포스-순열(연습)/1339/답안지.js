@@ -1,3 +1,7 @@
+// 전체적인 아이디어
+// 1.배열을 탐색하면서 알파벳에 대한 벨류값을 정한다.(어느 알파벳에 큰 값을 줄지 판단척도가 되는 값)
+// 2.벨류값으로만 배열로 바꾸어 정렬후 9~알파벳갯수 만큼 차례로 할당한다
+
 const [ _, ...words ] = require('fs').readFileSync('input.txt').toString().trim().split('\n');
 const solve = words => {
   const count = {};
